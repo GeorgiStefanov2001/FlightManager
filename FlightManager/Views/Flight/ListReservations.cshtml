@@ -1,0 +1,46 @@
+﻿@using FlightManager.ViewModels;
+@{
+    ViewData["Title"] = "ListReservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ListReservationsViewModel reservations = ViewData["ListReservations"] as ListReservationsViewModel;
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<div class="text-center">
+    <h1 style="padding-bottom: 20px;">Reservations</h1>
+    <table>
+        <tr>
+            <th>Flight Id</th>
+            <th>Feedback email</th>
+            <th>Regular seats</th>
+            <th>Business seats</th>       
+        </tr>
+        @foreach (var reservation in reservations.Reservations)
+        {
+            <tr>
+                <td>@reservation.FlightId</td>
+                <td>@reservation.FeedBackEmail</td>
+                <td>@reservation.RegularSeats</td>
+                <td>@reservation.BusinessSeats</td>
+            </tr>
+        }
+    </table>
+</div>
+

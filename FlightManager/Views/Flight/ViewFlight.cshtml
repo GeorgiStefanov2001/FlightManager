@@ -1,0 +1,145 @@
+﻿@using FlightManager.ViewModels;
+@using FlightManager.Data.Models;
+@model FlightManager.ViewModels.CreateReservationViewModel
+@{
+    ViewData["Title"] = "ViewFlight";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Flight flight = ViewData["Flight"] as Flight;
+    ListReservationsViewModel reservations = ViewData["Reservations"] as ListReservationsViewModel;
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<div class="text-center">
+    <h1 style="padding-bottom: 20px;">Flight Details</h1>
+    <table>
+        <tr>
+            <th>Departure location</th>
+            <th>Landing location</th>
+            <th>Departure date time</th>
+            <th>Landing date time</th>
+            <th>Duration</th>
+            <th>Plane type</th>
+            <th>Plane unique id</th>
+            <th>Pilot name</th>
+            <th>Regular seats</th>
+            <th>Business seats</th>
+            @if (User.IsInRole("admin"))
+            {
+                <th></th>
+            }
+        </tr>
+        <tr>
+            <td>@flight.DepartureLocation</td>
+            <td>@flight.LandingLocation</td>
+            <td>@flight.DepartureDateTime</td>
+            <td>@flight.LandingDateTime</td>
+            <td>@(flight.LandingDateTime - flight.DepartureDateTime)</td>
+            <td>@flight.PlaneType</td>
+            <td>@flight.PlaneUniqueId</td>
+            <td>@flight.PilotName</td>
+            <td>@flight.RegularSeats</td>
+            <td>@flight.BusinessSeats</td>
+            @if (User.IsInRole("admin"))
+            {
+                <td>
+                    <div style="text-align:center;">
+                        <a style="width:75px; text-align: center;" class="btn btn-warning btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="EditFlight" asp-route-id="@flight.Id">Edit</a>
+                        <a style="width:75px; text-align: center;" class="btn btn-danger btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="DeleteFlight" asp-route-id="@flight.Id">Delete</a>
+                    </div>
+                </td>
+            }
+        </tr>
+    </table>
+    <hr />
+
+</div>
+<div style="margin-top: 25px;">
+    <a class="btn btn-primary btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="ListFlights">Back</a>
+</div>
+<div style="text-align:center">
+    <h1 style="padding: 20px 0px 35px 0px">Reservations</h1>
+</div>
+
+
+<div style="text-align: center">
+    <h4>Make Reservation</h4>
+    <hr />
+    @if (flight.RegularSeats <= 0 && flight.BusinessSeats <= 0)
+    {
+        <p>Sorry, but You can't make a reservation for this flight because there are no tickets left</p>
+    }
+    else
+    {
+        //make a reservation
+        <div class="row">
+            <div class="col-md-4">
+                <p>@ViewBag.Message</p>
+                <form asp-action="ViewFlight">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="FlightId" type="hidden" value="@flight.Id" />
+                        <span asp-validation-for="FlightId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FeedBackEmail" class="control-label"></label>
+                        <input asp-for="FeedBackEmail" class="form-control" />
+                        <span asp-validation-for="FeedBackEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RegularSeats" class="control-label"></label>
+                        <input asp-for="RegularSeats" class="form-control" />
+                        <span asp-validation-for="RegularSeats" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BusinessSeats" class="control-label"></label>
+                        <input asp-for="BusinessSeats" class="form-control" />
+                        <span asp-validation-for="BusinessSeats" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Make Reservation" class="btn btn-success btn-rounded" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    <hr />
+    <h4>Existing reservations for this flight</h4>
+</div>
+<div style="margin: 25px 0px 50px 0px;"class="text-center">
+    <table>
+        <tr>
+            <th>Feedback email</th>
+            <th>Regular seats</th>
+            <th>Business seats</th>
+        </tr>
+        @foreach (var reservation in reservations.Reservations.Where(r=>r.FlightId == flight.Id))
+        {
+            <tr>
+                <td>@reservation.FeedBackEmail</td>
+                <td>@reservation.RegularSeats</td>
+                <td>@reservation.BusinessSeats</td>
+            </tr>
+        }
+    </table>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

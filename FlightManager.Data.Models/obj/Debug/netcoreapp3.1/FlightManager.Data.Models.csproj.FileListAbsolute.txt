@@ -1,0 +1,16 @@
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.deps.json
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.dll
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.pdb
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.AssemblyInfoInputs.cache
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.AssemblyInfo.cs
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.dll
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.pdb
+C:\GAS\SoftUni\Course_SD\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.csprojAssemblyReference.cache
+C:\GAS\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.deps.json
+C:\GAS\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.dll
+C:\GAS\FlightManager\FlightManager.Data.Models\bin\Debug\netcoreapp3.1\FlightManager.Data.Models.pdb
+C:\GAS\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.csprojAssemblyReference.cache
+C:\GAS\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.AssemblyInfoInputs.cache
+C:\GAS\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.AssemblyInfo.cs
+C:\GAS\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.dll
+C:\GAS\FlightManager\FlightManager.Data.Models\obj\Debug\netcoreapp3.1\FlightManager.Data.Models.pdb

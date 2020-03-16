@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Owin.Host.SystemWeb" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FlightManager.Data.Models\FlightManager.Data.Models.csproj" />
+    <ProjectReference Include="..\FlightManager.Data\FlightManager.Data.csproj" />
+    <ProjectReference Include="..\FlightManager.ViewModels\FlightManager.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

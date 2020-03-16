@@ -1,0 +1,67 @@
+﻿@model FlightManager.ViewModels.EditFlightViewModel
+@{
+    ViewData["Title"] = "EditFlight";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Flight</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <p>@ViewBag.Message</p>
+        <form asp-action="EditFlight">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DepartureLocation" class="control-label"></label>
+                <input asp-for="DepartureLocation" class="form-control" />
+                <span asp-validation-for="DepartureLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LandingLocation" class="control-label"></label>
+                <input asp-for="LandingLocation" class="form-control" />
+                <span asp-validation-for="LandingLocation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartureDateTime" class="control-label"></label>
+                <input asp-for="DepartureDateTime" class="form-control" />
+                <span asp-validation-for="DepartureDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LandingDateTime" class="control-label"></label>
+                <input asp-for="LandingDateTime" class="form-control" />
+                <span asp-validation-for="LandingDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlaneType" class="control-label"></label>
+                <input asp-for="PlaneType" class="form-control" />
+                <span asp-validation-for="PlaneType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlaneUniqueId" class="control-label"></label>
+                <input asp-for="PlaneUniqueId" class="form-control" />
+                <span asp-validation-for="PlaneUniqueId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PilotName" class="control-label"></label>
+                <input asp-for="PilotName" class="form-control" />
+                <span asp-validation-for="PilotName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegularSeats" class="control-label"></label>
+                <input asp-for="RegularSeats" class="form-control" />
+                <span asp-validation-for="RegularSeats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessSeats" class="control-label"></label>
+                <input asp-for="BusinessSeats" class="form-control" />
+                <span asp-validation-for="BusinessSeats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success btn-rounded" />
+                <a class="btn btn-primary btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="ListFlights">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+

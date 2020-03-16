@@ -1,0 +1,81 @@
+﻿@using FlightManager.ViewModels;
+@{
+    ViewData["Title"] = "ListFlights";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ListFlightsViewModel flights = ViewData["ListFlights"] as ListFlightsViewModel;
+}
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<div class="text-center">
+    <h1 style="padding-bottom: 20px;">Flights</h1>
+    @if (User.IsInRole("admin")) { 
+        <a style="text-align: center; margin: 25px 0px 25px 0px;" class="btn btn-primary btn-rounded"
+           role="button" asp-area="" asp-controller="Flight" asp-action="CreateFlight">Create new flight</a>
+    }
+    <table>
+        <tr>
+            <th>Departure location</th>
+            <th>Landing location</th>
+            <th>Departure date time</th>
+            <th>Landing date time</th>
+            <th>Duration</th>
+            <th>Plane type</th>
+            <th>Plane unique id</th>
+            <th>Pilot name</th>
+            <th>Regular seats</th>
+            <th>Business seats</th>
+            @if (User.IsInRole("admin"))
+            {
+                <th></th>
+            }
+            <th></th>
+        </tr>
+        @foreach (var flight in flights.Flights)
+        {
+            <tr>
+                <td>@flight.DepartureLocation</td>
+                <td>@flight.LandingLocation</td>
+                <td>@flight.DepartureDateTime</td>
+                <td>@flight.LandingDateTime</td>
+                <td>@(flight.LandingDateTime - flight.DepartureDateTime)</td>
+                <td>@flight.PlaneType</td>
+                <td>@flight.PlaneUniqueId</td>
+                <td>@flight.PilotName</td>
+                <td>@flight.RegularSeats</td>
+                <td>@flight.BusinessSeats</td>
+                @if (User.IsInRole("admin"))
+                {
+                    <td>
+                        <div style="text-align:center;">
+                            <a style="width:75px; text-align: center;" class="btn btn-warning btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="EditFlight" asp-route-id="@flight.Id">Edit</a>
+                            <a style="width:75px; text-align: center;" class="btn btn-danger btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="DeleteFlight" asp-route-id="@flight.Id">Delete</a>
+                        </div>
+                    </td>
+                }
+                <td>
+                    <div style="text-align:center;">
+                        <a style="width:75px; text-align: center;" class="btn btn-primary btn-rounded" role="button" asp-area="" asp-controller="Flight" asp-action="ViewFlight" asp-route-id="@flight.Id">Details</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
