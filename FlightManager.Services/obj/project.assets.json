@@ -7304,11 +7304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GAS\\FlightManager\\FlightManager.Services\\FlightManager.Services.csproj",
+      "projectUniqueName": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Services\\FlightManager.Services.csproj",
       "projectName": "FlightManager.Services",
-      "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Services\\FlightManager.Services.csproj",
+      "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Services\\FlightManager.Services.csproj",
       "packagesPath": "C:\\Users\\goshko\\.nuget\\packages\\",
-      "outputPath": "C:\\GAS\\FlightManager\\FlightManager.Services\\obj\\",
+      "outputPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7327,14 +7327,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj": {
-              "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj"
+            "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj": {
+              "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj"
             },
-            "C:\\GAS\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj": {
-              "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj"
+            "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj": {
+              "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj"
             },
-            "C:\\GAS\\FlightManager\\FlightManager.ViewModels\\FlightManager.ViewModels.csproj": {
-              "projectPath": "C:\\GAS\\FlightManager\\FlightManager.ViewModels\\FlightManager.ViewModels.csproj"
+            "C:\\GAS\\TestProject\\FlightManager\\FlightManager.ViewModels\\FlightManager.ViewModels.csproj": {
+              "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.ViewModels\\FlightManager.ViewModels.csproj"
             }
           }
         }

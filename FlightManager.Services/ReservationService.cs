@@ -45,8 +45,9 @@ namespace FlightManager.Services
             flight.RegularSeats -= regularSeats;
             flight.BusinessSeats -= businessSeats;
 
-            string emailBody = $"Reservation about flight {flightId} (Plane id: {flight.PlaneUniqueId}). " +
-                $"You reserved {regularSeats} regular seats and {businessSeats} business seats.";
+            string emailBody = $"Reservation about flight {flightId} from {flight.DepartureLocation} to {flight.LandingLocation} (Plane id: {flight.PlaneUniqueId}). " +
+                $"You reserved {regularSeats} regular seats and {businessSeats} business seats." +
+                $"The plane takes off at {flight.DepartureDateTime}. Expected flight duration: {flight.LandingDateTime-flight.DepartureDateTime}";
 
             //The feedback mail that the user enters must be valid!!!!!
             SendMail(feedbackEmail, emailBody);

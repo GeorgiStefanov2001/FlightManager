@@ -877,11 +877,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj",
+      "projectUniqueName": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj",
       "projectName": "FlightManager.Data.Models",
-      "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj",
+      "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj",
       "packagesPath": "C:\\Users\\goshko\\.nuget\\packages\\",
-      "outputPath": "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\obj\\",
+      "outputPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

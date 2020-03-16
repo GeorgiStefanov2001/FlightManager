@@ -7183,11 +7183,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GAS\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj",
+      "projectUniqueName": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj",
       "projectName": "FlightManager.Data",
-      "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj",
+      "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data\\FlightManager.Data.csproj",
       "packagesPath": "C:\\Users\\goshko\\.nuget\\packages\\",
-      "outputPath": "C:\\GAS\\FlightManager\\FlightManager.Data\\obj\\",
+      "outputPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7206,8 +7206,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj": {
-              "projectPath": "C:\\GAS\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj"
+            "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj": {
+              "projectPath": "C:\\GAS\\TestProject\\FlightManager\\FlightManager.Data.Models\\FlightManager.Data.Models.csproj"
             }
           }
         }
